@@ -1,0 +1,36 @@
+# Snowflake credentials
+config.py
+
+# Data files (generated locally, too large, never commit)
+data/
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary
+.tmp/
+tmp/

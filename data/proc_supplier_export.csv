@@ -1,0 +1,321 @@
+supplier_id,supplier_name,tax_id,city,email,last_updated,source_system
+PROC00001,Magnolia Healthcare Systems,,Chicago,ap@magnoliaheal.com,2026-06-22,PROCUREMENT
+PROC00002,Quickstep Technologies Incorporated,TX61-3294314,San Antonio,ap@quicksteptec.com,2026-07-25,PROCUREMENT
+PROC00003,XTREME PERFORMANCE PARTS LLC,,New York,,2026-07-07,PROCUREMENT
+PROC00004,Kestrel Defense Systems L.L.C.,TX26-1497447,San Antonio,ap@kestreldefen.com,2026-07-19,PROCUREMENT
+PROC00005,Emerald Co.ast Distributors,,Houston,ap@emeraldcoast.com,2026-08-28,PROCUREMENT
+PROC00006,Kirkland Industrial Services,TX91-3828600,Los Angeles,ap@kirklandindu.com,2026-07-26,PROCUREMENT
+PROC00007,Reno Capital Group L.L.C,TX45-9366230,Chicago,,2026-07-23,PROCUREMENT
+PROC00008,Verbena Holdings corporation,TX45-1683661,Houston,ap@verbenaholdi.com,2026-08-23,PROCUREMENT
+PROC00009,Pawnee   Industrial Services LLC,,Jacksonville,ap@pawneeindust.com,2026-09-02,PROCUREMENT
+PROC00010,Zephyr Wind Energy CORP,TX54-7501292,Chicago,ap@zephyrwinden.com,2026-09-09,PROCUREMENT
+PROC00011,Xcel Energy Services LLC.,TX71-3777609,Jacksonville,ap@xcelenergyse.com,2026-07-11,PROCUREMENT
+PROC00012,  Quorum Business Soln Inc,,Houston,ap@quorumbusine.com,2026-08-28,PROCUREMENT
+PROC00013,Vineyard   Energy Solutions Inc,TX14-6259599,San Antonio,,2026-08-07,PROCUREMENT
+PROC00014,Uppsala Resources COrporation,TX51-3275274,New York,ap@uppsalaresou.com,2026-07-29,PROCUREMENT
+PROC00015,Iron Gate Security   LLC,TX89-1897413,Jacksonville,ap@irongatesecu.com,2026-08-25,PROCUREMENT
+PROC00016,TUNDRA COLD STORAGE LLC,,Los Angeles,,2026-07-01,PROCUREMENT
+PROC00017,Quicksilver   Resources LLC.,TX62-2626103,Houston,ap@quicksilverr.com,2026-07-20,PROCUREMENT
+PROC00018,Zapata Holdings Companyrporation,TX80-3138964,San Diego,,2026-07-30,PROCUREMENT
+PROC00019,istanbul capital   partners,TX35-2439914,Chicago,ap@istanbulcapi.com,2026-07-04,PROCUREMENT
+PROC00020,Northgate Cafital Partners,,Chicago,,2026-08-23,PROCUREMENT
+PROC00021,Frontier Materials Group,,Phoenix,ap@frontiermate.com,2026-09-11,PROCUREMENT
+PROC00022,zavala capital group llc,TX96-3491140,Los Angeles,ap@zavalacapita.com,2026-09-17,PROCUREMENT
+PROC00023,Oxford Capital Partners LLC,TX53-6633992,San Diego,ap@oxfordcapita.com,2026-09-09,PROCUREMENT
+PROC00024,Bergen Capital Ptr. Inc,,Phoenix,ap@bergencapita.com,2026-07-19,PROCUREMENT
+PROC00025,Nuremberg Resources corp,,Los Angeles,ap@nurembergres.com,2026-08-02,PROCUREMENT
+PROC00026,Catalina Resources Companyrp,TX99-7144006,New York,ap@catalinareso.com,2026-07-29,PROCUREMENT
+PROC00027,persimmon capital group inc,,Chicago,ap@persimmoncap.com,2026-07-01,PROCUREMENT
+PROC00028,Laramie Capital Group L.L.C,,Phoenix,,2026-08-18,PROCUREMENT
+PROC00029,Dogwood fnvironmental LLC,,Houston,ap@dogwoodenvir.com,2026-09-11,PROCUREMENT
+PROC00030,Utrecht Capital Partners Inc,TX95-7703004,Houston,,2026-07-19,PROCUREMENT
+PROC00031,Ocean Blue Seafood Distributors,,Houston,ap@oceanbluesea.com,2026-07-19,PROCUREMENT
+PROC00032,Manchester Capital Group Inc,,Jacksonville,ap@manchesterca.com,2026-08-18,PROCUREMENT
+PROC00033,Terracotta Building Materials,,Phoenix,ap@terracottabu.com,2026-07-02,PROCUREMENT
+PROC00034,Temple Capital Partners LLC.,TX92-3563051,Houston,,2026-06-29,PROCUREMENT
+PROC00035,Uxiversal Supply Chain LLC,,Phoenix,,2026-09-17,PROCUREMENT
+PROC00036,Nova Biomedical corporation,,Dallas,,2026-07-24,PROCUREMENT
+PROC00037,Jamestown Energy Corp,,Houston,,2026-08-30,PROCUREMENT
+PROC00038,elderberry farms inc,TX87-3475780,Dallas,,2026-06-25,PROCUREMENT
+PROC00039,Eindhoven Industrial Inc.,TX92-9804414,San Antonio,,2026-07-11,PROCUREMENT
+PROC00040,Helena Holdings Corporation LLC,TX41-6184835,Jacksonville,ap@helenaholdin.com,2026-08-21,PROCUREMENT
+PROC00041,VikingeIndustrial Services,,New York,,2026-07-16,PROCUREMENT
+PROC00042,Hawthorne Industrial LLC.,TX80-5364066,Los Angeles,ap@hawthorneind.com,2026-08-27,PROCUREMENT
+PROC00043,Yellowhammer Industries Inc,,San Antonio,ap@yellowhammer.com,2026-07-26,PROCUREMENT
+PROC00044,Juneau Marine Services Incorporated,,Chicago,ap@juneaumarine.com,2026-09-06,PROCUREMENT
+PROC00045,Pasadena Capital Group INC,TX41-8326210,San Antonio,ap@pasadenacapi.com,2026-09-07,PROCUREMENT
+PROC00046,Xylem Water Technologies LLC,TX49-9774135,Houston,,2026-07-02,PROCUREMENT
+PROC00047,Jackrabbit Transportation INC,TX43-1208528,San Diego,ap@jackrabbittr.com,2026-07-19,PROCUREMENT
+PROC00048,Rotterdaf Capital Group L.L.C,TX96-1089453,Chicago,ap@rotterdamcap.com,2026-06-26,PROCUREMENT
+PROC00049,  Wintergreen Energy L.L.C.,TX10-1638106,San Diego,,2026-09-12,PROCUREMENT
+PROC00050,Liberty Freight Services,TX37-3338898,Houston,ap@libertyfreig.com,2026-07-22,PROCUREMENT
+PROC00051,Xylosma   Capital Partners inc,TX98-7856485,Chicago,ap@xylosmacapit.com,2026-07-17,PROCUREMENT
+PROC00052,Round Rock Holdinls Corp L.L.C.,,San Antonio,ap@roundrockhol.com,2026-08-14,PROCUREMENT
+PROC00053,Bayshore Industrial Partners,TX15-1359697,Jacksonville,ap@bayshoreindu.com,2026-08-16,PROCUREMENT
+PROC00054,Stockholm Capital Ptr. LLC,TX26-9445182,San Antonio,ap@stockholmcap.com,2026-07-08,PROCUREMENT
+PROC00055,Mockingbird Media LLC,TX44-8844347,Chicago,ap@mockingbirdm.com,2026-09-18,PROCUREMENT
+PROC00056,Ridgeline Construction Corporation,,Jacksonville,,2026-08-23,PROCUREMENT
+PROC00057,Hollybrook Capital LLC,,Jacksonville,ap@hollybrookca.com,2026-06-24,PROCUREMENT
+PROC00058,Sierra Nevada Breweries,TX35-1984566,Dallas,ap@sierranevada.com,2026-09-10,PROCUREMENT
+PROC00059,Boise Holdings Corporationoration,TX11-1119536,Philadelphia,,2026-07-21,PROCUREMENT
+PROC00060,Lakewood Technology Solutions,TX34-1090023,San Diego,,2026-08-22,PROCUREMENT
+PROC00061,Eastern Seaboard Trading L.L.C,,Los Angeles,,2026-06-26,PROCUREMENT
+PROC00062,Olympus Precision Tools Incorporated,TX21-7558804,Philadelphia,ap@olympuspreci.com,2026-09-18,PROCUREMENT
+PROC00063,Vernon Holdings Inc. LLC,,Philadelphia,ap@vernonholdin.com,2026-08-26,PROCUREMENT
+PROC00064,plainview capital partners l.l.c,TX92-9562615,Dallas,ap@plainviewcap.com,2026-07-13,PROCUREMENT
+PROC00065,  Acadian Timber Corporation,,Philadelphia,ap@acadiantimbe.com,2026-09-02,PROCUREMENT
+PROC00066,Inland Empire Transportation,TX10-7891942,Dallas,ap@inlandempire.com,2026-07-20,PROCUREMENT
+PROC00067,HAMBURG RESOURCES CORP L.L.C,,San Antonio,ap@hamburgresou.com,2026-07-29,PROCUREMENT
+PROC00068,Wisteria Holdings L.L.C,,New York,ap@wisteriahold.com,2026-07-02,PROCUREMENT
+PROC00069,  Foxwood Financial Services,TX59-3410304,Phoenix,,2026-08-27,PROCUREMENT
+PROC00070,Jasper Creek Holdings LLC,TX40-7509414,Phoenix,ap@jaspercreekh.com,2026-06-24,PROCUREMENT
+PROC00071,Xalapa Resources Corporation,TX11-3855823,Jacksonville,ap@xalaparesour.com,2026-08-26,PROCUREMENT
+PROC00072,Elderberry Capital Group Inc,,Chicago,,2026-07-15,PROCUREMENT
+PROC00073,Norwood Industrial Partners,,New York,ap@norwoodindus.com,2026-06-27,PROCUREMENT
+PROC00074,Quail Run Properties Inc,,Dallas,ap@quailrunprop.com,2026-09-11,PROCUREMENT
+PROC00075,BrownsvillenCapital Grp Inc,TX54-4152417,Jacksonville,ap@brownsvillec.com,2026-08-09,PROCUREMENT
+PROC00076,turin holdings co.rporation llc,TX49-3268803,Los Angeles,,2026-08-20,PROCUREMENT
+PROC00077,Osceola Resources Companyrporation,TX37-7362910,Jacksonville,ap@osceolaresou.com,2026-08-02,PROCUREMENT
+PROC00078,Quebec HOLDINGS Inc LLC,TX87-8709925,Philadelphia,ap@quebecholdin.com,2026-08-20,PROCUREMENT
+PROC00079,waco capital grp. llc,,Los Angeles,,2026-09-15,PROCUREMENT
+PROC00080,Tamarack Resources CORP,,Phoenix,ap@tamarackreso.com,2026-07-09,PROCUREMENT
+PROC00081,Uruapan Resources corppLLC,,San Antonio,,2026-09-18,PROCUREMENT
+PROC00082,Denton Resources inc,,Los Angeles,,2026-08-31,PROCUREMENT
+PROC00083,PINNACLE STEEL WORKS LLC,,Jacksonville,ap@pinnaclestee.com,2026-08-26,PROCUREMENT
+PROC00084,Bluebell Healthcare L.L.C,TX46-6536084,Jacksonville,ap@bluebellheal.com,2026-07-05,PROCUREMENT
+PROC00085,Zion National Resources llc,TX16-2767015,Phoenix,ap@zionnational.com,2026-08-09,PROCUREMENT
+PROC00086,Yarrow Holdings Corp.oration,,Dallas,,2026-08-04,PROCUREMENT
+PROC00087,Yucatan Resources CORP,TX54-6818679,Phoenix,ap@yucatanresou.com,2026-08-10,PROCUREMENT
+PROC00088,Cascade Renewable Energy Inc,,Los Angeles,ap@cascaderenew.com,2026-07-12,PROCUREMENT
+PROC00089,Copperleaf Energy Svc.,TX35-4219687,Houston,,2026-09-13,PROCUREMENT
+PROC00090,Bridgewater Asset Management,TX36-4476242,New York,ap@bridgewatera.com,2026-07-12,PROCUREMENT
+PROC00091,Empire State Properties LLC,TX28-5315365,Dallas,,2026-09-10,PROCUREMENT
+PROC00092,El Paso Holdings Companyrporation,TX11-7065380,Philadelphia,,2026-08-30,PROCUREMENT
+PROC00093,Houston moldings Incorporated,TX59-6222965,Houston,,2026-07-16,PROCUREMENT
+PROC00094,First Choice Staffing Solutions,,Jacksonville,ap@firstchoices.com,2026-07-04,PROCUREMENT
+PROC00095,Maplewood Dairy Farms LLC.,TX37-8656143,New York,,2026-06-21,PROCUREMENT
+PROC00096,Havana Trading Company LLC.,TX27-1293511,Philadelphia,ap@havanatradin.com,2026-06-26,PROCUREMENT
+PROC00097,Harvest Agricultural Services,TX36-9488669,Chicago,ap@harvestagric.com,2026-08-30,PROCUREMENT
+PROC00098,Xcaliber Precision Parts INC,TX49-7089627,Chicago,,2026-07-08,PROCUREMENT
+PROC00099,Yamrow   Medical Supplies Inc.,,Los Angeles,ap@yarrowmedica.com,2026-09-17,PROCUREMENT
+PROC00100,York Industrial Fasteners,,San Antonio,ap@yorkindustri.com,2026-07-04,PROCUREMENT
+PROC00101,  Recbud Capital PARTNERS Inc,,Houston,ap@redbudcapita.com,2026-06-29,PROCUREMENT
+PROC00102,Waterford Crystal Holdings LLC,,Houston,,2026-07-09,PROCUREMENT
+PROC00103,KERRVILLE CAPITAL PARTNERS INC,,San Antonio,,2026-07-26,PROCUREMENT
+PROC00104,Bermuda Triangle Tradieg LLC.,TX49-5332140,Philadelphia,,2026-06-23,PROCUREMENT
+PROC00105,Plainview Dairy Companyoperative,,Chicago,,2026-08-29,PROCUREMENT
+PROC00106,Midwest Grain Cooperative,,Houston,ap@midwestgrain.com,2026-07-08,PROCUREMENT
+PROC00107,Pelican   Bay Resources LLC,TX39-9930185,Chicago,ap@pelicanbayre.com,2026-08-29,PROCUREMENT
+PROC00108,nacogdoches holdings corp,TX51-4373073,Houston,ap@nacogdochesh.com,2026-07-19,PROCUREMENT
+PROC00109,Goldenrod Agriculture Inc,,San Diego,,2026-07-26,PROCUREMENT
+PROC00110,Ironwooc Paper Mill Inc,TX60-3878915,San Diego,ap@ironwoodpape.com,2026-06-26,PROCUREMENT
+PROC00111,Hillcrest Medical Supplies,TX69-2588501,Chicago,ap@hillcrestmed.com,2026-08-19,PROCUREMENT
+PROC00112,Jersey Holdings COrporation,TX60-3963561,San Diego,ap@jerseyholdin.com,2026-08-13,PROCUREMENT
+PROC00113,Kingston Marine Services L.L.C.,,Houston,,2026-07-23,PROCUREMENT
+PROC00114,Uvalde Energy Services LLC.,TX43-8363256,San Diego,ap@uvaldeenergy.com,2026-09-06,PROCUREMENT
+PROC00115,Cardiff Resources Companyrporation,TX48-6906557,San Diego,,2026-09-13,PROCUREMENT
+PROC00116,Union Pacific Suppliers LLC,TX33-6104638,San Antonio,ap@unionpacific.com,2026-07-03,PROCUREMENT
+PROC00117,Quito Capital Grp LLC,,Los Angeles,ap@quitocapital.com,2026-09-19,PROCUREMENT
+PROC00118,Summit Co.nstruction Group,TX67-3184086,Chicago,,2026-07-25,PROCUREMENT
+PROC00119,Xanadu Resort Holdings LLC,TX69-1175220,Jacksonville,ap@xanaduresort.com,2026-07-01,PROCUREMENT
+PROC00120,Irongate Capital Partners LLC,TX14-8651299,Dallas,,2026-07-14,PROCUREMENT
+PROC00121,Fresno Agricultural SERVICES,TX18-9061101,New York,,2026-09-17,PROCUREMENT
+PROC00122,Olive Branch Holdings L.L.C,,New York,,2026-08-17,PROCUREMENT
+PROC00123,Nassau Holdings Corp.oration,,Phoenix,ap@nassauholdin.com,2026-07-20,PROCUREMENT
+PROC00124,Wicklow Industrial Holdings,TX87-1586435,Los Angeles,,2026-06-21,PROCUREMENT
+PROC00125,ureenleaf Organics LLC,TX60-8289856,Phoenix,,2026-07-16,PROCUREMENT
+PROC00126,Durango Mining Corp L.L.C,TX69-4707533,Phoenix,ap@durangominin.com,2026-06-21,PROCUREMENT
+PROC00127,Eugene Holdings Co.rp,,Dallas,ap@eugeneholdin.com,2026-07-14,PROCUREMENT
+PROC00128,Drummond Co.al Company LLC,TX75-3700386,Houston,,2026-07-31,PROCUREMENT
+PROC00129,Garland Resources Corp,,Los Angeles,ap@garlandresou.com,2026-07-17,PROCUREMENT
+PROC00130,Paintbrush Energy Sol,TX55-4653585,Jacksonville,ap@paintbrushen.com,2026-07-27,PROCUREMENT
+PROC00131,  Irving Resources Corp L.L.C,,Los Angeles,ap@irvingresour.com,2026-07-01,PROCUREMENT
+PROC00132,  Platte River Energy Inc,TX15-5738115,Jacksonville,ap@platterivere.com,2026-08-17,PROCUREMENT
+PROC00133,Cardinal Health Systems LLC,TX52-7813739,Dallas,ap@cardinalheal.com,2026-09-14,PROCUREMENT
+PROC00134,Inwberry Resources corp,,Chicago,ap@inkberryreso.com,2026-09-05,PROCUREMENT
+PROC00135,VIENNA CAPITAL GROUP   LLC,,New York,ap@viennacapita.com,2026-08-21,PROCUREMENT
+PROC00136,Harrogate Hldgs Corp,TX42-5928583,Los Angeles,ap@harrogatehol.com,2026-08-22,PROCUREMENT
+PROC00137,Sequoia Capital Ventures,TX97-2084622,Los Angeles,ap@sequoiacapit.com,2026-09-18,PROCUREMENT
+PROC00138,Westfield Commercial Properties,TX55-6627366,Dallas,ap@westfieldcom.com,2026-07-15,PROCUREMENT
+PROC00139,REDROCK CAPITAL   PTR.,,Houston,,2026-07-11,PROCUREMENT
+PROC00140,KILLEEN HOLDINGS CORP L.L.C,,Chicago,,2026-08-27,PROCUREMENT
+PROC00141,Tidewater Marine Services,TX20-6775553,Jacksonville,ap@tidewatermar.com,2026-07-06,PROCUREMENT
+PROC00142,Deepwater Exploration LLC,,Phoenix,,2026-06-21,PROCUREMENT
+PROC00143,Uvalde County Resources Corporation,,Philadelphia,,2026-09-07,PROCUREMENT
+PROC00144,El Paso Energy Partners L.L.C,TX69-1935020,Houston,,2026-08-28,PROCUREMENT
+PROC00145,Quartermaster Supply Inc.,,Los Angeles,,2026-08-19,PROCUREMENT
+PROC00146,Lyon Capital Group L.L.C,TX70-5343270,New York,ap@lyoncapitalg.com,2026-09-06,PROCUREMENT
+PROC00147,Eagle River Technologies,TX90-5607889,San Diego,,2026-08-17,PROCUREMENT
+PROC00148,  Pocatello Holdings Corp LLC.,,Philadelphia,ap@pocatellohol.com,2026-08-23,PROCUREMENT
+PROC00149,Zurich Capital Partners INC,TX27-2103356,Phoenix,,2026-08-10,PROCUREMENT
+PROC00150,Cheyenne Resources Co.rp LLC,TX57-1736598,Jacksonville,,2026-09-08,PROCUREMENT
+PROC00151,Abilene Resources llc,TX15-2224402,Houston,,2026-07-07,PROCUREMENT
+PROC00152,Yakima Capital GROUP LLC,TX44-6241306,Chicago,,2026-07-23,PROCUREMENT
+PROC00153,Iceberg Cold Chain Solutions,,Dallas,,2026-09-05,PROCUREMENT
+PROC00154,Offshore Energy Partners LLC,,New York,,2026-08-28,PROCUREMENT
+PROC00155,Orange County Resgurces L.L.C.,,Chicago,,2026-08-19,PROCUREMENT
+PROC00156,guadalupe rewources corporation,,Jacksonville,,2026-09-02,PROCUREMENT
+PROC00157,Newcastle Holdings Corp.,TX25-7713721,Houston,,2026-08-30,PROCUREMENT
+PROC00158,Wichita Falls Holdings inc,TX64-3423462,San Diego,,2026-07-11,PROCUREMENT
+PROC00159,Hackberry Resources Companyrp,,Houston,ap@hackberryres.com,2026-08-15,PROCUREMENT
+PROC00160,Kinnickinnic Rivez Corp,,New York,,2026-08-31,PROCUREMENT
+PROC00161,Kingfisher Oil Services Incorporated,TX14-8612677,Jacksonville,ap@kingfisheroi.com,2026-09-12,PROCUREMENT
+PROC00162,Weatherford Capital Ptrs,,Philadelphia,ap@weatherfordc.com,2026-06-22,PROCUREMENT
+PROC00163,Riverside Paper Products Co,TX22-3174323,Jacksonville,,2026-07-10,PROCUREMENT
+PROC00164,Alder Creek Timber LLC,,Dallas,,2026-08-11,PROCUREMENT
+PROC00165,Vanguard Financial Svc. Inc,,Los Angeles,ap@vanguardfina.com,2026-08-14,PROCUREMENT
+PROC00166,Sawtooth Lumber Products llc,,Philadelphia,ap@sawtoothlumb.com,2026-09-04,PROCUREMENT
+PROC00167,Overland Transport   Corp,,Dallas,ap@overlandtran.com,2026-07-12,PROCUREMENT
+PROC00168,Zagreb Holdings Co.rp,TX81-4570004,San Diego,,2026-07-01,PROCUREMENT
+PROC00169,Xian Resources Corporationoration LLC,,Los Angeles,ap@xianresource.com,2026-07-03,PROCUREMENT
+PROC00170,vortex energy partners l.l.c.,,Phoenix,ap@vortexenergy.com,2026-07-10,PROCUREMENT
+PROC00171,Imperial   Industries Corp,,New York,ap@imperialindu.com,2026-07-22,PROCUREMENT
+PROC00172,timberline resources inc,,San Antonio,ap@timberlinere.com,2026-09-04,PROCUREMENT
+PROC00173,Yorkshire   Trading Companympany Inc,TX86-2712460,Dallas,ap@yorkshiretra.com,2026-09-02,PROCUREMENT
+PROC00174,VICTORIA RESOURCEY CORPORATION,,Houston,,2026-07-05,PROCUREMENT
+PROC00175,Galloway Industrial Svc,,Jacksonville,,2026-06-23,PROCUREMENT
+PROC00176,Lakeshore Data SERVICES LLC,,Phoenix,ap@lakeshoredat.com,2026-07-03,PROCUREMENT
+PROC00177,Munich Holdings Co.rporation,TX48-7582848,Houston,ap@munichholdin.com,2026-09-19,PROCUREMENT
+PROC00178,Inverness Resources LLC,,Houston,ap@invernessres.com,2026-08-12,PROCUREMENT
+PROC00179,jupiter   chemical company,,Houston,,2026-08-16,PROCUREMENT
+PROC00180,Zirconia Materials Corp LLC.,,Philadelphia,,2026-09-05,PROCUREMENT
+PROC00181,Rotterdam Trading Co.mpany,TX47-4110526,Phoenix,ap@rotterdamtra.com,2026-08-16,PROCUREMENT
+PROC00182,Jackson Hole Holdings inc,TX78-8174817,Dallas,ap@jacksonholeh.com,2026-09-07,PROCUREMENT
+PROC00183,FOXGLOVE PHARMACEUTICALS INC,,Houston,ap@foxglovephar.com,2026-06-28,PROCUREMENT
+PROC00184,Mesquite Energy Ptr. LLC,TX27-6324817,San Antonio,ap@mesquiteener.com,2026-08-06,PROCUREMENT
+PROC00185,Copenhagen Holdings Corporation,,San Diego,,2026-07-03,PROCUREMENT
+PROC00186,Dublin Capital Partners LLC,,San Diego,ap@dublincapita.com,2026-09-13,PROCUREMENT
+PROC00187,Evergreen Timber Products ltc,,New York,,2026-06-30,PROCUREMENT
+PROC00188,Allegheny Energy Svc.,TX65-5354091,San Antonio,,2026-07-14,PROCUREMENT
+PROC00189,Zenova Life Sciences LLC,TX64-1435436,Los Angeles,,2026-08-25,PROCUREMENT
+PROC00190,Maple Grove Industries INC,,Phoenix,,2026-08-17,PROCUREMENT
+PROC00191,Flagstaff Resources L.L.C.,,Dallas,,2026-08-03,PROCUREMENT
+PROC00192,Oslo Capital Ptr. LLC,TX82-4958636,San Diego,,2026-07-17,PROCUREMENT
+PROC00193,Valley Green Energy Inc.,,Houston,ap@valleygreene.com,2026-08-06,PROCUREMENT
+PROC00194,Fern Valley Farms LLC,TX59-4727556,Phoenix,ap@fernvalleyfa.com,2026-07-27,PROCUREMENT
+PROC00195,Allied Defense Systems LLC,TX23-5542305,New York,ap@allieddefens.com,2026-08-31,PROCUREMENT
+PROC00196,Upland Agriculture Svc LLC,TX86-2170264,Houston,ap@uplandagricu.com,2026-09-09,PROCUREMENT
+PROC00197,Utica Capital   Partners inc,,Philadelphia,ap@uticacapital.com,2026-07-28,PROCUREMENT
+PROC00198,Zacatecas Mining Corp   L.L.C,,San Diego,,2026-07-20,PROCUREMENT
+PROC00199,Rainier Brewing Company L.L.C,TX20-4805974,Dallas,,2026-07-20,PROCUREMENT
+PROC00200,Pampa Resources COrp,TX78-6240415,New York,,2026-07-29,PROCUREMENT
+PROC00201,LongviewrFiber Co.mpany,,Philadelphia,ap@longviewfibe.com,2026-09-05,PROCUREMENT
+PROC00202,Granite State Insurance GROUP,TX39-5617322,New York,ap@granitestate.com,2026-07-13,PROCUREMENT
+PROC00203,  Conroe Holdings corp LLC,TX85-7294650,Dallas,,2026-08-27,PROCUREMENT
+PROC00204,Yuma Holdings COrporation,,San Diego,,2026-07-17,PROCUREMENT
+PROC00205,Javelin Defense Systems llc,,Philadelphia,ap@javelindefen.com,2026-07-16,PROCUREMENT
+PROC00206,Absolute Power Solutions Inc,,Phoenix,ap@absolutepowe.com,2026-09-13,PROCUREMENT
+PROC00207,Frisco Holdings Companyrporation,TX52-9214058,Jacksonville,,2026-07-04,PROCUREMENT
+PROC00208,Laredo Resources INC,TX23-5639827,Houston,,2026-08-25,PROCUREMENT
+PROC00209,Indigo Technology Partners LLC.,TX99-5250190,New York,ap@indigotechno.com,2026-07-11,PROCUREMENT
+PROC00210,Painted Hills Resources LLC,,Phoenix,ap@paintedhills.com,2026-08-31,PROCUREMENT
+PROC00211,Delta Industrial Supply CO,TX16-8115491,San Antonio,,2026-08-24,PROCUREMENT
+PROC00212,Nightshade Biotech L.L.C.,TX70-3669354,Houston,,2026-07-07,PROCUREMENT
+PROC00213,Zion Rfsources CORP LLC,TX54-7190613,Dallas,,2026-08-09,PROCUREMENT
+PROC00214,Quince Resources CORPoration,TX63-4517192,Phoenix,,2026-06-24,PROCUREMENT
+PROC00215,Terracycle Environmental INC,,Phoenix,ap@terracycleen.com,2026-08-20,PROCUREMENT
+PROC00216,longhorn cattle co.mpany inc,TX54-5230848,San Diego,ap@longhorncatt.com,2026-08-02,PROCUREMENT
+PROC00217,Elkhorn Industries inc,TX75-1679381,Jacksonville,ap@elkhornindus.com,2026-07-23,PROCUREMENT
+PROC00218,Yoakum Capital Ptr. Inc,,Chicago,ap@yoakumcapita.com,2026-07-24,PROCUREMENT
+PROC00219,Valleybrook Consulting Inc,,Chicago,,2026-08-06,PROCUREMENT
+PROC00220,Xcel Hosdings Corp.oration LLC,,Philadelphia,ap@xcelholdings.com,2026-09-08,PROCUREMENT
+PROC00221,  Pacific Rim Trading Comkanympany,TX51-3392871,Jacksonville,ap@pacificrimtr.com,2026-08-05,PROCUREMENT
+PROC00222,Underhill Co.nstruction Inc,TX10-7003455,Houston,,2026-09-06,PROCUREMENT
+PROC00223,Jourdanton Resources Corp L.L.C.,TX29-8249691,Phoenix,ap@jourdantonre.com,2026-09-09,PROCUREMENT
+PROC00224,Acapulco HOLDINGS Inc,TX58-8045546,New York,ap@acapulcohold.com,2026-08-30,PROCUREMENT
+PROC00225,Yarrow Creek Holdings L.L.C.,,Houston,ap@yarrowcreekh.com,2026-08-25,PROCUREMENT
+PROC00226,Diamond Ridge Mining Corp,TX73-3333497,Dallas,ap@diamondridge.com,2026-08-04,PROCUREMENT
+PROC00227,Panama Canal Services Incorporated,TX13-6918075,Los Angeles,ap@panamacanals.com,2026-08-24,PROCUREMENT
+PROC00228,Lima Capital Partners inc,TX35-2082234,Chicago,ap@limacapitalp.com,2026-08-02,PROCUREMENT
+PROC00229,McAllen Capital Partners LLC,,Jacksonville,ap@mcallencapit.com,2026-07-20,PROCUREMENT
+PROC00230,Seguin Rehources inc LLC,,Philadelphia,,2026-08-16,PROCUREMENT
+PROC00231,greystone capital management,TX71-7607458,Dallas,ap@greystonecap.com,2026-07-28,PROCUREMENT
+PROC00232,Aalborg Industrial Services L.L.C,,Chicago,ap@aalborgindus.com,2026-08-27,PROCUREMENT
+PROC00233,Irving Holdings inc,,Phoenix,ap@irvingholdin.com,2026-06-30,PROCUREMENT
+PROC00234,YORKTOWN RESOUCCES INC,TX31-4255460,Jacksonville,,2026-09-19,PROCUREMENT
+PROC00235,Kalispell Resources Companyrp,TX58-4684767,New York,ap@kalispellres.com,2026-06-28,PROCUREMENT
+PROC00236,WESTWOOD REAL ESTATE PTRS,TX97-5959935,Chicago,ap@westwoodreal.com,2026-09-11,PROCUREMENT
+PROC00237,FIGTREE HLDG LLC,,Los Angeles,ap@figtreeholdi.com,2026-07-18,PROCUREMENT
+PROC00238,Zenith Electronics Companyrporation,TX86-7342912,San Diego,,2026-07-22,PROCUREMENT
+PROC00239,Kumquat Distribution inc,TX94-4319514,Houston,ap@kumquatdistr.com,2026-08-07,PROCUREMENT
+PROC00240,QUINCY RESOURCES INC,,Jacksonville,,2026-07-11,PROCUREMENT
+PROC00241,Newpark Resources Inc.,TX95-1229109,Dallas,,2026-06-25,PROCUREMENT
+PROC00242,Edinburgh Holdings INC,,Jacksonville,ap@edinburghhol.com,2026-08-23,PROCUREMENT
+PROC00243,Quantum Data Analyties llc,TX72-4442820,Chicago,ap@quantumdataa.com,2026-08-23,PROCUREMENT
+PROC00244,Missoula   Holdiggs COrporation,,Jacksonville,,2026-08-14,PROCUREMENT
+PROC00245,New   Braunfels Capital GROUP LLC,TX25-3491105,Los Angeles,ap@newbraunfels.com,2026-06-30,PROCUREMENT
+PROC00246,Goldfinch Mining Corporation,,Jacksonville,ap@goldfinchmin.com,2026-07-26,PROCUREMENT
+PROC00247,Eastwood Co.nstruction Group,,Phoenix,ap@eastwoodcons.com,2026-09-17,PROCUREMENT
+PROC00248,  Jacaranda Holdings L.L.C.,,San Diego,ap@jacarandahol.com,2026-09-06,PROCUREMENT
+PROC00249,Zephyrhills Holdings LLC.,TX43-3981899,Dallas,ap@zephyrhillsh.com,2026-07-29,PROCUREMENT
+PROC00250,Cottonwood Energy Partners,,Los Angeles,ap@cottonwooden.com,2026-06-27,PROCUREMENT
+PROC00251,Redwood Forest Products INC,,San Diego,ap@redwoodfores.com,2026-07-25,PROCUREMENT
+PROC00252,Wenatchee Resourcev INC,,Houston,,2026-08-22,PROCUREMENT
+PROC00253,Broadmoor Capital Gmp LLC,TX91-9550092,Philadelphia,ap@broadmoorcap.com,2026-08-16,PROCUREMENT
+PROC00254,Ultramar Diamond Shamrock L.L.C,,New York,ap@ultramardiam.com,2026-06-21,PROCUREMENT
+PROC00255,Global Packaging Solutions inc,TX33-7481337,New York,,2026-06-24,PROCUREMENT
+PROC00256,  Apex Logistics Corporationoration,,Philadelphia,,2026-07-03,PROCUREMENT
+PROC00257,Verdant Energy Solutions Incorporated,,Chicago,,2026-08-02,PROCUREMENT
+PROC00258,United Metals Corp.oration,,Houston,ap@unitedmetals.com,2026-07-23,PROCUREMENT
+PROC00259,Nighthawk Oil and Gas Inc,,Dallas,ap@nighthawkoil.com,2026-06-24,PROCUREMENT
+PROC00260,Zabar Food Distribution L.L.C.,TX25-4341058,Jacksonville,,2026-09-19,PROCUREMENT
+PROC00261,Beaumont Holdings Corp L.L.C.,,Chicago,ap@beaumonthold.com,2026-09-12,PROCUREMENT
+PROC00262,Kodiak Offshore Drilling,,Phoenix,ap@kodiakoffsho.com,2026-07-18,PROCUREMENT
+PROC00263,Xanthus Capital Partners inc,TX98-3738003,San Antonio,,2026-07-29,PROCUREMENT
+PROC00264,Midland Resources Inc.,TX43-3213530,New York,,2026-07-18,PROCUREMENT
+PROC00265,Vancouver Holdings CORP LLC,TX53-1932646,San Diego,ap@vancouverhol.com,2026-08-18,PROCUREMENT
+PROC00266,FRANKFURT CAPITAL GRPL LLC,TX27-4849415,New York,ap@frankfurtcap.com,2026-07-28,PROCUREMENT
+PROC00267,Venture Capital Group INC,,Chicago,,2026-06-24,PROCUREMENT
+PROC00268,Iquique Maritime Services Inc,,San Diego,ap@iquiquemarit.com,2026-06-28,PROCUREMENT
+PROC00269,Glasgow   Capital Grp. Inc,TX98-6805495,Dallas,ap@glasgowcapit.com,2026-08-04,PROCUREMENT
+PROC00270,Texarkana Capital Grp.   LLC,TX75-1671583,San Diego,ap@texarkanacap.com,2026-08-05,PROCUREMENT
+PROC00271,Rosewood Capitat L.L.C,,San Diego,ap@rosewoodcapi.com,2026-08-28,PROCUREMENT
+PROC00272,Spokane Holdings corporation,TX55-6743279,New York,ap@spokaneholdi.com,2026-08-09,PROCUREMENT
+PROC00273,Dallas Capital Group LLC,TX80-2427127,Dallas,ap@dallascapita.com,2026-09-03,PROCUREMENT
+PROC00274,Interstate COmmerce Partners,TX40-9695679,New York,,2026-07-23,PROCUREMENT
+PROC00275,Limestone Resources Corp.,,San Antonio,ap@limestoneres.com,2026-07-21,PROCUREMENT
+PROC00276,Servicemaster   Holdings LLC,,Houston,ap@servicemaste.com,2026-08-27,PROCUREMENT
+PROC00277,Verbena Capital Grp. Inc,TX32-2307139,Dallas,ap@verbenacapit.com,2026-08-11,PROCUREMENT
+PROC00278,Xeriscape Landscaping inc,TX54-9991049,Houston,ap@xeriscapelan.com,2026-08-05,PROCUREMENT
+PROC00279,Dusseldorf Resources L.L.C.,,New York,,2026-09-09,PROCUREMENT
+PROC00280,Jacksonville Capital   Grp,TX32-6533953,San Diego,ap@jacksonville.com,2026-07-29,PROCUREMENT
+PROC00281,Recife Trading Company Incorporated,,Philadelphia,,2026-08-23,PROCUREMENT
+PROC00282,Zara Industrial Supplies llc,TX99-5547639,San Diego,,2026-08-02,PROCUREMENT
+PROC00283,Zoysia Resources LLC,TX66-4557566,Philadelphia,ap@zoysiaresour.com,2026-07-31,PROCUREMENT
+PROC00284,Yellowstone Environmental Group,TX48-9386720,Jacksonville,ap@yellowstonee.com,2026-08-21,PROCUREMENT
+PROC00285,Crestline Holdings corporation,TX46-9239836,San Antonio,ap@crestlinehol.com,2026-08-04,PROCUREMENT
+PROC00286,Ogden Capital   Partners INC,TX45-5193704,Chicago,ap@ogdencapital.com,2026-07-25,PROCUREMENT
+PROC00287,  Larimer County Resources LLC,TX38-4210304,Dallas,ap@larimercount.com,2026-08-26,PROCUREMENT
+PROC00288,Santos Holdings CORm LLC,,Philadelphia,,2026-07-13,PROCUREMENT
+PROC00289,Toulouse   Holdings Corp.,TX22-8291161,Philadelphia,,2026-06-22,PROCUREMENT
+PROC00290,nosemite Capital Partners,TX80-8428067,Chicago,ap@yosemitecapi.com,2026-07-15,PROCUREMENT
+PROC00291,Watershed Environmental Companyrp,TX41-4400052,Jacksonville,ap@watershedenv.com,2026-07-14,PROCUREMENT
+PROC00292,Zinnia Medical Supplies INC,TX36-8034330,Jacksonville,ap@zinniamedica.com,2026-07-10,PROCUREMENT
+PROC00293,Anchorage Capital Group llc,TX72-8641466,Jacksonville,ap@anchoragecap.com,2026-07-07,PROCUREMENT
+PROC00294,Wroclaw Resources L.L.C,TX23-8506642,Jacksonville,,2026-07-06,PROCUREMENT
+PROC00295,Cancun Resort Holdings Inc.,,Chicago,ap@cancunresort.com,2026-07-13,PROCUREMENT
+PROC00296,OSAGE PLAINS AGRICULTURE LLC,TX38-7353137,Los Angeles,ap@osageplainsa.com,2026-09-09,PROCUREMENT
+PROC00297,  Uranium Energy Corp llc,TX66-1447925,San Antonio,ap@uraniumenerg.com,2026-09-03,PROCUREMENT
+PROC00298,BlueStar Manufacturing Inc,TX62-8905211,Houston,,2026-09-10,PROCUREMENT
+PROC00299,Oakwood Healthcare PARTNERS,,Houston,ap@oakwoodhealt.com,2026-07-30,PROCUREMENT
+PROC00300,Salzbury Resources Corp.,TX88-6269768,Houston,ap@salzburgreso.com,2026-09-04,PROCUREMENT
+PROC00301,Kilmarnock Services INC,TX17-8580482,Chicago,ap@kilmarnockse.com,2026-06-26,PROCUREMENT
+PROC00302,Birchwood   Properties Inc,,Los Angeles,,2026-07-25,PROCUREMENT
+PROC00303,Thornberry Capital Grp,TX73-8146563,Phoenix,ap@thornberryca.com,2026-07-26,PROCUREMENT
+PROC00304,Jade Softwaie Co.nsulting Inc,TX44-2925872,Phoenix,ap@jadesoftware.com,2026-07-18,PROCUREMENT
+PROC00305,Jerusalem Holdings Incorporated LLC,,San Antonio,,2026-08-02,PROCUREMENT
+PROC00306,San Antonio Resources Inc,TX57-7669730,New York,,2026-07-31,PROCUREMENT
+PROC00307,Gateway Medical Supplies LLC,,Philadelphia,ap@gatewaymedic.com,2026-07-30,PROCUREMENT
+PROC00308,  XERXES INDUSTRIAL L.L.C.,TX52-6848921,Los Angeles,ap@xerxesindust.com,2026-08-23,PROCUREMENT
+PROC00309,Corpus Christi Resources,,Los Angeles,ap@corpuschrist.com,2026-08-16,PROCUREMENT
+PROC00310,Whitecap Resources Corporation,TX80-5267240,San Diego,ap@whitecapreso.com,2026-07-17,PROCUREMENT
+PROC00311,Bluegrass Capital Partners Inc.,,Phoenix,ap@bluegrasscap.com,2026-07-01,PROCUREMENT
+PROC00312,Driftwood Energy Partners llc,,San Diego,,2026-08-18,PROCUREMENT
+PROC00313,Longview Holdings Corp LLC,,Chicago,,2026-09-12,PROCUREMENT
+PROC00314,Underwood Paper Products L.L.C.,TX24-5070684,Los Angeles,ap@underwoodpap.com,2026-07-25,PROCUREMENT
+PROC00315,Krakow Industrial Services,TX16-3308796,Houston,ap@krakowindust.com,2026-07-01,PROCUREMENT
+PROC_HN001,Apex Logistic Systems LLC,TX35-1020247,San Diego,,2026-08-03,PROCUREMENT
+PROC_HN002,Global Package Services Inc,TX63-9904842,Dallas,,2026-08-25,PROCUREMENT
+PROC_HN003,Summit Constructors LLC,TX14-6780436,San Diego,,2026-09-04,PROCUREMENT
+PROC_HN004,Delta Industries Supply LLC,TX70-4685549,Philadelphia,,2026-08-12,PROCUREMENT
+PROC_HN005,United Metal Works Corp,TX89-1051522,Chicago,,2026-08-09,PROCUREMENT
