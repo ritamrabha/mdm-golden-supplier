@@ -2,7 +2,7 @@
 
 **A data engineering portfolio project** that demonstrates master data management through a supplier reconciliation pipeline with measured match tuning and survivorship rules.
 
-## What You've Built (Stage 0 + 1)
+## What's Built (Stage 0 + 1)
 
 ### The Problem
 Two enterprise systems hold supplier records that represent the same real-world entities but disagree on names, formats, and even presence/absence of tax IDs. The pipeline reconciles them into a single trusted "golden record" and quantifies matching accuracy.
