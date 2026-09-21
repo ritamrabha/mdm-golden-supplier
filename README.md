@@ -1,183 +1,152 @@
-# MDM Golden Supplier Reconciliation Pipeline
+# Supplier Master Data Reconciliation Pipeline
 
-**A data engineering portfolio project** that demonstrates master data management through a supplier reconciliation pipeline with measured match tuning and survivorship rules.
+A Snowflake + SQL + Python pipeline that reconciles two disagreeing supplier
+systems into a single trusted "golden record" — with matching accuracy that's
+measured against ground truth, not asserted.
 
-## What's Built (Stage 0 + 1)
+Built as a portfolio project for data-engineering / MDM interviews. Two
+divergent source systems, an ERP vendor master and a Procurement/AP export,
+describe the same real-world suppliers but disagree on name formatting,
+completeness, and freshness. The pipeline profiles, standardizes, fuzzy-matches,
+and merges them — and every design decision below is backed by a number, not
+a guess.
 
-### The Problem
-Two enterprise systems hold supplier records that represent the same real-world entities but disagree on names, formats, and even presence/absence of tax IDs. The pipeline reconciles them into a single trusted "golden record" and quantifies matching accuracy.
+## Headline result
 
-### The Data
+**At similarity threshold 90 (chosen by sweeping 70–95 against a held-out
+ground truth): 98.3% precision, 98.0% recall, F1 0.981.**
 
-Three tables in Snowflake's `RAW` schema:
+Zero of the 5 deliberately planted "hard negative" pairs (genuinely different
+companies with deceptively similar names) were incorrectly auto-merged —
+confirmed by direct query, not assumption.
 
-| Table | Source | Rows | Purpose |
-|---|---|---|---|
-| `erp_vendor_master` | ERP system | ~500 | Formal, tax-ID-heavy, stale |
-| `proc_supplier_export` | Procurement/AP | ~500 | Trade names, abbreviations, fresher |
-| `match_truth` | Generated ground truth | ~200 pairs | Answer key for scoring matches |
+## Architecture
 
-**Why this matters:** You can measure whether your matching rules work. Most student projects just fuzzy-match and guess at a threshold. This one scores precision and recall so you can defend your choices in an interview.
+```
+RAW                          STAGING                         CURATED
+─────────────────────────────────────────────────────────────────────────
+erp_vendor_master    ┐
+                      ├──→ profile_results (Stage 2: null %, dupes, ranges)
+proc_supplier_export  ┘
+                      │
+                      ├──→ suppliers_standardized (Stage 3: clean_name,
+                      │     normalized legal suffixes, both sources unioned)
+                      │
+                      ├──→ candidate_pairs (Stage 4: blocked on name prefix,
+                      │     scored with JAROWINKLER_SIMILARITY + EDITDISTANCE)
+                      │
+                      ├──→ match_tuning_report (Stage 4: precision/recall/F1
+                      │     swept across 6 thresholds against ground truth)
+                      │
+                      ├──→ mutual_best_pairs (Stage 5: stable/mutual-best
+                      │     matching on top of the threshold decision)
+                      │
+match_truth ──────────┘     (ground truth, used only for scoring)
+                      │
+                      ├──→ golden_supplier ─────────────→ (Stage 5: one row
+                      │     per real supplier, attribute-level survivorship)
+                      │
+                      ├──→ record_lineage ──────────────→ (Stage 5: which
+                      │     source won each attribute, and why)
+                      │
+                      └──→ steward_queue ───────────────→ (Stage 5: grey-zone
+                            matches, 80–89 similarity, pending human review)
+```
 
-### Why Supplier Data
+## Results, stage by stage
 
-Infoverity's MDM JD specifically names supplier onboarding as a workflow. Using their domain reads as contextual awareness.
+**Stage 1 — Data:** 405 ERP records, 320 Procurement records (725 total),
+seeded from 415 real US company names and corrupted realistically (suffix
+variants, typos, whitespace, casing drift). 305 ground-truth pairs: 300
+genuine matches + 5 hard negatives.
 
-Hard negatives (pairs of genuinely different companies with deceptively similar names) are baked in, so your precision score won't trivialize to 100%.
+**Stage 2 — Profiling:** ERP tax_id null rate 7.7% vs. Procurement 44.4%
+(confirms ERP as the trustworthy source for tax ID). ERP phone null 21% vs.
+Procurement email null 39.1% (both sources meaningfully incomplete on contact
+info). Irregular whitespace in 12.5% of Procurement names, 0% of ERP — matches
+the corruption design exactly. Also surfaced 2 exact duplicate names inside
+ERP itself, an unplanned finding.
 
-## Running It Yourself
+**Stage 3 — Standardization:** Unioned both sources into one shape; built a
+`clean_name` column via uppercase → strip punctuation → collapse whitespace →
+canonicalize legal-suffix variants (`INCORPORATED`→`INC`, `SVCS`→`SERVICES`,
+etc.) with word-boundary-safe `REGEXP_REPLACE`. Row count verified unchanged
+(725) — standardization cleans values, never drops or duplicates rows.
 
-### Prerequisites
-- Python 3.8+
-- Snowflake trial account (free, 30 days, $400 credits)
-- pip
+**Stage 4 — Matching:** Blocked on the first 4 characters of the standardized
+name rather than city — city-blocking would have excluded most hard negatives
+from ever being compared, since their cities were randomized independently.
+Swept thresholds 70/75/80/85/90/95 in one query; threshold 90 gave the best
+F1 (0.981). At 95, precision barely moved but recall fell to 92.3% as
+typo-corrupted genuine matches dropped below the cutoff.
 
-### Quick Start (30 min)
+**Stage 5 — Survivorship:** Added mutual-best (stable) matching on top of the
+threshold, so no procurement record can be claimed by two different ERP
+vendors. Result: 294 auto-merged pairs, 1 pair sent to steward review, 110
+ERP and 25 Procurement records with no acceptable match. `golden_supplier`
+has 429 rows, all distinct — zero duplicates. `record_lineage` has exactly
+1,470 rows (294 × 5 attributes). Confirmed by direct query that all 5 hard
+negatives were excluded before the auto-merge threshold even applied.
 
-1. **Sign up for Snowflake trial** (https://signup.snowflake.com)
-   - Standard edition, AWS, us-east-1
-   - Note your account ID, email, and password
+**Stage 6 — Data quality:** 9 automated pytest assertions covering identity
+(no duplicate golden records), completeness (every source row accounted for
+in exactly one outcome), required fields, lineage integrity, and matching
+correctness against ground truth (zero hard negatives leaked into
+auto-merge).
 
-2. **In Snowsight (web UI):**
-   - Create warehouse `COMPUTE_XS` (X-Small, auto-suspend 1 min)
-   - Run:
-     ```sql
-     CREATE DATABASE mdm_golden_supplier;
-     CREATE SCHEMA mdm_golden_supplier.RAW;
-     CREATE SCHEMA mdm_golden_supplier.STAGING;
-     CREATE SCHEMA mdm_golden_supplier.CURATED;
-     ```
+## Survivorship rules
 
-3. **Locally:**
-   ```bash
-   git clone <this repo>
-   cd mdm-golden-supplier
-   pip install snowflake-connector-python pandas requests
-   
-   # Edit config.py with your Snowflake credentials
-   python data_generator.py    # ~2 min: fetches SEC data, creates corrupted CSVs
-   python load_raw.py          # ~5 min: loads into Snowflake
-   ```
+| Attribute | Rule | Why |
+|---|---|---|
+| `supplier_name` | ERP always wins | ERP is the vendor master of record |
+| `tax_id` | ERP first, fall back to Procurement | ERP's null rate (7.7%) is far lower (Stage 2 finding) |
+| `phone` / `email` | Both kept, separately | Different fields collected by different systems — not a real conflict |
+| `city` | Most recently-updated source wins | Recency matters more than "trust" for something that can simply change |
+| `last_updated` | `GREATEST()` of both sources | Golden record reflects whichever source touched it last |
 
-4. **Verify in Snowsight:**
-   ```sql
-   SELECT COUNT(*) FROM mdm_golden_supplier.RAW.erp_vendor_master;
-   SELECT * FROM mdm_golden_supplier.RAW.erp_vendor_master LIMIT 3;
-   ```
+Grey zone (80–89 similarity) routes to `steward_queue` for human review
+rather than auto-merging or discarding.
 
-## What's Next: The Full Pipeline
+## Running it
 
-This is **Stage 1 of 6**. You now have:
-- ✅ Snowflake database + schemas
-- ✅ Two messy source systems loaded
-- ✅ Ground truth for evaluation
+```bash
+pip install snowflake-connector-python pandas requests pytest
 
-### Coming stages:
-- **Stage 2:** Profiling SQL (null %, duplicates, range checks)
-- **Stage 3:** Standardization (STAGING schema)
-- **Stage 4:** Fuzzy matching + threshold sweep (core of the project)
-- **Stage 5:** Survivorship rules + attribute lineage
-- **Stage 6:** Data quality tests + README with results
+# Edit config.py with your Snowflake credentials, then:
+python data_generator.py     # generates the two source CSVs + ground truth
+python load_raw.py           # loads them into Snowflake RAW schema
+```
 
-By **Stage 4**, you'll have a chart showing precision/recall at each threshold (75/80/85/90/95) so you can defend your match threshold choice with data, not a guess. That's the differentiator.
+Then run each stage's SQL file in order in Snowsight:
+`stage2_profiling.sql` → `stage3_standardization.sql` →
+`stage4_matching.sql` → `stage5_survivorship.sql`
 
-## Project Structure
+Finally:
+
+```bash
+pytest test_data_quality.py -v
+```
+
+## Repo structure
 
 ```
 mdm-golden-supplier/
-├── README.md                    (this file)
-├── .gitignore                   (never commit data or credentials)
-├── config.py                    (your Snowflake connection — edit before running)
-├── data_generator.py            (fetches SEC data, creates corrupted sources)
-├── load_raw.py                  (loads CSVs into Snowflake RAW schema)
-├── data/                        (generated CSVs, local only, never commit)
-└── (future stages)
-    ├── profiling_sql.sql        (Stage 2)
-    ├── staging_sql.sql          (Stage 3)
-    ├── matching_sql.sql         (Stage 4)
-    ├── survivorship_sql.sql     (Stage 5)
-    └── dq_tests.py              (Stage 6)
+├── README.md
+├── config.py                     (Snowflake credentials — not committed)
+├── data_generator.py             (Stage 1: source + ground-truth generation)
+├── load_raw.py                   (Stage 1: load into RAW)
+├── stage2_profiling.sql          (Stage 2)
+├── stage3_standardization.sql    (Stage 3)
+├── stage4_matching.sql           (Stage 4: blocking, matching, threshold sweep)
+├── stage5_survivorship.sql       (Stage 5: golden record, lineage, steward queue)
+├── test_data_quality.py          (Stage 6: automated DQ assertions)
+└── data/                         (generated CSVs, not committed)
 ```
 
-## Interview Talking Points
+## What I'd do differently at production scale
 
-When asked about this project in an interview:
-
-**"I built a supplier master reconciliation pipeline in Snowflake that demonstrates real MDM thinking."**
-
-- **Data profiling first:** Before matching, I profiled the raw sources to understand null %, duplicates, and format variance.
-- **Measured matching:** I swept thresholds (75-95%) against a held-out ground truth to score precision and recall, so I could defend my threshold choice with a chart, not a guess.
-- **Attribute-level survivorship:** Not just "which record wins," but "phone came from ERP because it's more trusted; address came from procurement because it's fresher." Every win is logged in a lineage table.
-- **Grey-zone handling:** Records with similarity in the 80-90 range go into a steward queue for human review, which is exactly what MDM platforms do.
-- **Automated quality checks:** Python test suite asserts no duplicate golden records, no nulls in critical fields, and every source row accounted for.
-
-**Why it matters:** This shows you understand that MDM isn't just fuzzy matching — it's data *governance* with measured trade-offs, not luck.
-
-## Architecture Diagram
-
-```
-RAW                      STAGING              CURATED
-─────────────────────────────────────────────────────────
-
-erp_vendor_master    ┐
-                     ├──→ Profiling ───→ profile_results
-proc_supplier_export ┘
-                     
-                     ┐
-                     ├──→ Standardize ───→ suppliers_standardized
-                     ┘
-                     
-                     ┐
-                     ├──→ Block & Match ──→ candidate_pairs
-                     │   (Jaro-Winkler)   (+ scores)
-                     ├──→ Sweep Threshold ──→ match_tuning_report
-                     │   (precision/recall)   (chart data)
-                     ┘
-                     
-match_truth (for scoring, not in workflow)
-                     
-                     ┐
-                     ├──→ Survivorship ──→ golden_supplier
-                     │    (window functions) (1 row/entity)
-                     │
-                     ├──→ Lineage ──────→ record_lineage
-                     │    (which source won each attribute)
-                     │
-                     └──→ Steward Queue ─→ steward_queue
-                          (grey zone matches) (for manual review)
-```
-
-## Key Skills Demonstrated
-
-- **SQL:** Window functions (ROW_NUMBER), CTEs, blocking with WHERE conditions
-- **Python:** Data generation, Snowflake connector, test assertions
-- **Snowflake:** Database/schema design, COPY INTO, CREATE OR REPLACE TABLE
-- **Data Engineering:** Profiling, standardization, entity resolution, data quality checks
-- **Communication:** This README itself, plus the match tuning chart in Stage 4
-
-## Troubleshooting
-
-### "Connection failed: Invalid account identifier"
-- Make sure you copied your account ID correctly from Snowflake UI
-- Format is usually `xy12345.us-east-1`
-
-### "File not found: data_generator.py"
-- Make sure you're in the `mdm-golden-supplier` folder when running Python commands
-
-### "SEC data fetch failed"
-- If SEC EDGAR is down, `data_generator.py` falls back to a small sample dataset
-- The pipeline works identically with sample data, just fewer records
-
-### Snowflake queries are slow
-- Make sure warehouse is running (it auto-suspends after 1 min of inactivity)
-- Restart it in Snowsight: Admin → Compute → COMPUTE_XS → Start
-
-## Next: Stage 2 (Profiling)
-
-Once you've verified the RAW data loads, run the profiling SQL (to be provided next) to get an inventory of data quality issues. This sets up the case for why standardization matters.
-
----
-
-**Questions?** Check the Snowflake docs or ask in the next stage guidance.
-
-**Ready to move forward?** Next: Profiling SQL.
+Snowflake's native Data Metric Functions for scheduled profiling (Enterprise
+edition only — this project deliberately stayed on Standard, so DMFs aren't
+used here); partitioning the block-key scan so it doesn't degrade on tables
+with millions of rows; Streams + Tasks so new supplier records get matched
+incrementally instead of the whole pipeline re-running as a batch job.
