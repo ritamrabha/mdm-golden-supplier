@@ -1,9 +1,6 @@
--- ============================================================
--- STAGE 3: STANDARDIZATION
--- Unions both sources into one shape and builds a clean_name
--- column suitable for fuzzy matching. raw_name is preserved
--- untouched alongside it — never overwrite the source value.
--- ============================================================
+
+-- STAGE 3 STANDARDIZATION
+
 
 USE DATABASE mdm_golden_supplier;
 
@@ -112,24 +109,23 @@ SELECT
     last_updated
 FROM step11;
 
--- ============================================================
+-- ==================================
 -- Verify the transformation
--- ============================================================
+-- =======================================
 
--- Row counts should match RAW exactly (405 + 320 = 725) — standardization
--- never drops or adds rows, only cleans values
+-- Row counts 
 SELECT source_system, COUNT(*) AS row_count, COUNT(DISTINCT clean_name) AS distinct_clean_names
 FROM STAGING.suppliers_standardized
 GROUP BY source_system;
 
--- Spot-check: rows where standardization actually changed something,
+-- rows where standardization actually changed something,
 -- proving the transformation is doing real work
 SELECT source_system, raw_name, clean_name
 FROM STAGING.suppliers_standardized
 WHERE raw_name != clean_name
 LIMIT 20;
 
--- Bonus: the 2 duplicate ERP names profiling caught — see who they are
+
 SELECT vendor_name, COUNT(*) AS occurrences
 FROM RAW.erp_vendor_master
 GROUP BY vendor_name
