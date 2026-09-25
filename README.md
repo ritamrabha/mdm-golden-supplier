@@ -20,6 +20,9 @@ Zero of the 5 deliberately planted "hard negative" pairs (genuinely different
 companies with deceptively similar names) were incorrectly auto-merged —
 confirmed by direct query, not assumption.
 
+<img width="1014" height="224" alt="image" src="https://github.com/user-attachments/assets/48d9fb60-0e05-4c6a-925c-16207e20d793" />
+
+
 ## Architecture
 
 ```
