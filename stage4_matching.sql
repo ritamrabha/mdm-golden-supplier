@@ -4,8 +4,8 @@
 
 USE DATABASE mdm_golden_supplier;
 
--- ------------------------------------------------------------
--- 1. Candidate pairs (blocking + similarity scoring)
+
+-- Candidate pairs (blocking + similarity scoring)
 
 
 CREATE OR REPLACE TABLE STAGING.candidate_pairs AS
