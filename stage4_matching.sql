@@ -1,21 +1,12 @@
--- ============================================================
+
 -- STAGE 4: BLOCKING + FUZZY MATCHING + THRESHOLD SWEEP
--- This is the centerpiece of the project: instead of picking a
--- similarity threshold by guessing, we score every threshold
--- against known ground truth and pick the one that's defensible.
--- ============================================================
+
 
 USE DATABASE mdm_golden_supplier;
 
 -- ------------------------------------------------------------
 -- 1. Candidate pairs (blocking + similarity scoring)
---    Blocked on the first 4 characters of clean_name, NOT city.
---    Hard negatives get independently randomized cities, so city
---    blocking would exclude them from the candidate pool entirely
---    and make precision look artificially perfect. Name-prefix
---    blocking correctly keeps "Apex Logistics Corporation" and
---    "Apex Logistic Systems LLC" in the same block.
--- ------------------------------------------------------------
+
 
 CREATE OR REPLACE TABLE STAGING.candidate_pairs AS
 
@@ -48,17 +39,15 @@ JOIN proc p
   ON e.block_key = p.block_key;
 
 
--- Sanity check: how many candidate pairs did blocking generate,
--- versus the full cross join it avoided?
+-- Sanity check: how many candidate pairs did blocking generate,versus the full cross join it avoided?
 SELECT
     (SELECT COUNT(*) FROM STAGING.candidate_pairs)                                    AS candidate_pairs,
     (SELECT COUNT(*) FROM RAW.erp_vendor_master) * (SELECT COUNT(*) FROM RAW.proc_supplier_export) AS full_cross_join_size;
 
 
--- ------------------------------------------------------------
+
 -- 2. Threshold sweep: score precision / recall / F1 at each
---    threshold against the ground truth, in one query.
--- ------------------------------------------------------------
+
 
 CREATE OR REPLACE TABLE STAGING.match_tuning_report AS
 
@@ -72,8 +61,7 @@ scored AS (
     CROSS JOIN thresholds t
 ),
 
--- Best candidate match per ERP record, per threshold — an ERP
--- vendor resolves to at most one procurement supplier
+-- Best candidate matchper ERP reco rd, per threshold — an ERP vendor resolves to at most one procurement supplier
 predicted AS (
     SELECT threshold, erp_id, proc_id, name_similarity
     FROM scored
@@ -129,11 +117,6 @@ FROM rates
 ORDER BY threshold;
 
 
--- ------------------------------------------------------------
--- 3. Review the sweep — this is the table you screenshot for
---    your README and defend in the interview. Snowsight's
---    "Chart" tab on this result can plot precision/recall/F1
---    directly against threshold, no extra tooling needed.
--- ------------------------------------------------------------
+-- Review sweep
 
 SELECT * FROM STAGING.match_tuning_report ORDER BY threshold;
