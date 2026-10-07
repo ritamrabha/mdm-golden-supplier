@@ -4,8 +4,7 @@ A Snowflake + SQL + Python pipeline that reconciles two disagreeing supplier
 systems into a single trusted "golden record" — with matching accuracy that's
 measured against ground truth, not asserted.
 
-Built as a portfolio project for data-engineering / MDM interviews. Two
-divergent source systems, an ERP vendor master and a Procurement/AP export,
+Two divergent source systems, an ERP vendor master and a Procurement/AP export,
 describe the same real-world suppliers but disagree on name formatting,
 completeness, and freshness. The pipeline profiles, standardizes, fuzzy-matches,
 and merges them — and every design decision below is backed by a number, not
